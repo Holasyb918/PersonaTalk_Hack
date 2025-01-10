@@ -52,7 +52,7 @@ class TexRender(nn.Module):
         # face_mesh_ref: Bx5x3x256x256
         # face_tex: Bx5x3x256x256
         bz, lt, c, h, w = lip_mesh_ref.shape
-        bz, ft, c, h, w = lip_mesh_ref.shape
+        bz, ft, c, h, w = face_mesh_ref.shape
 
         # reshape
         lip_mesh_ref = self.pre_rearrange_for_encode(lip_mesh_ref)
